@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+body{
+    background-color:rgb(85, 85, 241);
+    height: 90vh;
+}
+h1,h2{
+    color:#fff;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+h1{
+    font-size: 4.5rem;
+    font-weight:500;
+}
+h2{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top:-40px;
+}
+
+#clock-container{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin:-20px auto 20px;
+}
+#analog-clock{
+    background-color: rgb(241, 219, 128);
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 2px 5px 5px rgb(77, 75, 75);
+    visibility: hidden;
+    margin-left:120px;
+}
+.analog .number{
+    --rotation: 0;
+    position:absolute;
+    width:100%;
+    height:100%;
+    text-align:center;
+    transform: rotate(var(--rotation));
+    font-size:1.5rem;
+}
+#analog-clock .number1{--rotation:30deg;}
+#analog-clock .number2{--rotation:60deg;}
+#analog-clock .number3{--rotation:90deg;}
+#analog-clock .number4{--rotation:120deg;}
+#analog-clock .number5{--rotation:150deg;}
+#analog-clock .number6{--rotation:180deg;}
+#analog-clock .number7{--rotation:210deg;}
+#analog-clock .number8{--rotation:240deg;}
+#analog-clock .number9{--rotation:270deg;}
+#analog-clock .number10{--rotation:300deg;}
+#analog-clock .number11{--rotation:330deg;}
+
+#analog-clock .hand{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid rgb(209, 207, 207);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+#analog-clock::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }  
+  #analog-clock .hand.second {
+    width: 3px;
+    height: 45%;
+    background-color: red;
+  }  
+  #analog-clock .hand.minute {
+    width: 7px;
+    height: 40%;
+    background-color: rgb(51, 51, 51);
+  }  
+  #analog-clock .hand.hour {
+    width: 10px;
+    height: 35%;
+    background-color: rgb(29, 29, 29);
+  }
+  #digital-clock{
+    color: cornsilk;
+    font-size:4rem;
+    background-color: rgba(65, 64, 64, 0.384);
+    box-shadow:  0 5px 5px rgb(77, 75, 75);
+    padding:10px;
+    border-radius: 5px;
+    visibility: hidden;
+    margin-left:-300px;
+}
+  .type-clocks-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.time-button{
+    width:300px;
+    height:80px;
+    border-radius: 5px;  
+    cursor: pointer;  
+    font-size: 2.5rem;
+}
+#analog-clock-title{
+    background:rgb(133, 173, 92);
+    color:#000;
+    box-shadow:  0 5px 5px rgb(77, 75, 75);
+}
+#digital-clock-title{
+    color:cornsilk;
+    background-color:rgb(85, 83, 83);
+    box-shadow:  0 5px 5px rgb(77, 75, 75);
+}
+
+.title-clock{
+    font-size: 2.5rem;
+    padding:5px 20px;
+    margin:10px;
+}
