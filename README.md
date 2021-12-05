@@ -1,3 +1,4 @@
+# Clock
 There are two options to display the time in this app:
 
 There are two buttons here; one shows analog clocks and the other shows digital clocks.
